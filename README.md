@@ -1,6 +1,7 @@
 # DROPBOX
 
-![atom](https://raw.githubusercontent.com/oda-alexandre/atom/master/logo-dropbox.png) ![docker](https://raw.githubusercontent.com/oda-alexandre/atom/master/logo-docker.png)
+![dropbox](https://raw.githubusercontent.com/oda-alexandre/dropbox/master/logo-dropbox.png) ![docker](https://raw.githubusercontent.com/oda-alexandre/dropbox/master/logo-docker.png)
+
 
 ## INDEX
 
@@ -31,13 +32,15 @@ mkdir $HOME/dropbox
 docker run -d --name dropbox -v ${HOME}/dropbox:/home/dropbox/Dropbox --restart=always alexandreoda/dropbox
 ```
 
+
 ## CONFIGURATION
 
-Utilisez les logs pour la premiere connexion
+Utilisez les logs du container au premier lancement pour obtenir le lien de synchronisation dropbox
 
 ```
 docker logs dropbox
 ```
+
 
 ## LICENSE
 
