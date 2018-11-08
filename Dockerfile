@@ -22,4 +22,6 @@ wget
 
 EXPOSE 17500
 
-CMD /bin/bash .dropbox-dist/dropboxd
+ENTRYPOINT /bin/bash
+
+CMD .dropbox-dist/dropboxd
