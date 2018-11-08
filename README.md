@@ -13,6 +13,11 @@
 - [License](#LICENSE)
 
 
+## BUILD DOCKER
+
+[![dropbox docker build](https://img.shields.io/docker/build/alexandreoda/dropbox.svg)](https://hub.docker.com/r/alexandreoda/dropbox)
+
+
 ## INTRODUCTION
 
 Ce repository contient le fichier Dockerfile de [Dropbox](https://www.dropbox.com/) pour [Docker](https://www.docker.com), mis à jour automatiquement dans le [Docker Hub](https://hub.docker.com/r/alexandreoda/dropbox/) public.
