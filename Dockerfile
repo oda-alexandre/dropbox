@@ -15,11 +15,11 @@ USER dropbox
 
 WORKDIR /home/dropbox
 
-RUN wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
+RUN wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | sudo tar xzf -
 
 RUN sudo apt-get --purge autoremove -y \
 wget
 
 EXPOSE 17500
 
-CMD /home/dropbox/.dropbox-dist/dropboxd
+CMD /bin/bash .dropbox-dist/dropboxd
