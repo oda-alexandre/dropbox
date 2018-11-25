@@ -1,6 +1,6 @@
 # DROPBOX
 
-![dropbox](https://raw.githubusercontent.com/oda-alexandre/dropbox/master/logo-dropbox.png) ![docker](https://raw.githubusercontent.com/oda-alexandre/dropbox/master/logo-docker.png)
+![dropbox](https://raw.githubusercontent.com/oda-alexandre/dropbox/master/img/logo-dropbox.png) ![docker](https://raw.githubusercontent.com/oda-alexandre/dropbox/master/img/logo-docker.png)
 
 
 ## INDEX
