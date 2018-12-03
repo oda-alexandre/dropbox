@@ -18,6 +18,13 @@ adduser dropbox sudo
 
 USER dropbox
 
+RUN sudo apt-get --purge autoremove -y \
+wget && \
+sudo apt-get autoclean -y && \
+sudo rm /etc/apt/sources.list && \
+sudo rm -rf /var/cache/apt/archives/* && \
+sudo rm -rf /var/lib/apt/lists/*
+
 EXPOSE 17500
 
 CMD .dropbox-dist/dropboxd
