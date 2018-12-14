@@ -15,8 +15,7 @@ adduser dropbox sudo
 RUN wget https://www.dropbox.com/download?dl=packages/dropbox.py -O /usr/local/bin/dropbox-cli && \
 wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf - && \
 chmod +x /usr/local/bin/dropbox-cli && \
-chown dropbox:dropbox /usr/local/bin/dropbox-cli && \
-chown dropbox:dropbox -R /root/
+chown dropbox:dropbox /usr/local/bin/dropbox-cli
 
 RUN apt-get --purge autoremove -y
 
