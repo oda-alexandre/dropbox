@@ -31,7 +31,7 @@ Installer [Docker](https://www.docker.com)
 ## INSTALLATION
 
 ```
-docker run -d --name dropbox -v ${HOME}:/home/dropbox --restart=always alexandreoda/dropbox
+docker run -d --name dropbox -v ${HOME}:/home/dropbox --restart=always -v /etc/localtime:/etc/localtime:ro -p 17500:17500 alexandreoda/dropbox
 ```
 
 

@@ -5,25 +5,22 @@ MAINTAINER https://oda-alexandre.github.io
 RUN apt-get update && apt-get install -y --no-install-recommends \
 sudo \
 ca-certificates \
-wget
-
-RUN wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
-
-RUN apt-get --purge autoremove -y \
+python \
 wget
 
 RUN useradd -d /home/dropbox -m dropbox && \
 passwd -d dropbox && \
 adduser dropbox sudo
 
-USER dropbox
+RUN wget https://www.dropbox.com/download?dl=packages/dropbox.py -O /usr/local/bin/dropbox-cli && \
+wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf - && \
+chmod +x /usr/local/bin/dropbox-cli && \
+chown dropbox:dropbox /usr/local/bin/dropbox-cli && \
+chown dropbox:dropbox -R /root/
 
-RUN sudo apt-get --purge autoremove -y \
-wget && \
-sudo apt-get autoclean -y && \
-sudo rm /etc/apt/sources.list && \
-sudo rm -rf /var/cache/apt/archives/* && \
-sudo rm -rf /var/lib/apt/lists/*
+RUN apt-get --purge autoremove -y
+
+USER dropbox
 
 EXPOSE 17500
 
