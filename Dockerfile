@@ -14,11 +14,15 @@ RUN useradd -d /home/dropbox -m dropbox && \
 passwd -d dropbox && \
 adduser dropbox sudo
 
+# SELECTION UTILISATEUR
+USER dropbox
+
+# SELECTION DE L'ESPACE DE TRAVAIL
+WORKDIR /home/dropbox
+
 # INSTALLATION DE L'APPLICATION
-RUN wget https://www.dropbox.com/download?dl=packages/dropbox.py -O /usr/local/bin/dropbox-cli && \
-wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf - && \
-chmod +x /usr/local/bin/dropbox-cli && \
-chown dropbox:dropbox /usr/local/bin/dropbox-cli
+RUN sudo wget https://www.dropbox.com/download?dl=packages/dropbox.py -O /usr/local/bin/dropbox-cli && \
+wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
 
 # NETTOYAGE
 RUN sudo apt-get --purge autoremove -y \
@@ -27,9 +31,6 @@ sudo apt-get autoclean -y && \
 sudo rm /etc/apt/sources.list && \
 sudo rm -rf /var/cache/apt/archives/* && \
 sudo rm -rf /var/lib/apt/lists/*
-
-# SELECTION UTILISATEUR
-USER dropbox
 
 # EXPOSITION PORT
 EXPOSE 17500
