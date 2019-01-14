@@ -10,7 +10,7 @@
 - [Prerequis](#PREREQUIS)
 - [Installation](#INSTALLATION)
 - [Configuration](#CONFIGURATION)
-- [License](#LICENSE)coucou
+- [License](#LICENSE)
 
 
 ## BUILD DOCKER
