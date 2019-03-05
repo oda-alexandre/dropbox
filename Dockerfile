@@ -3,6 +3,7 @@ FROM debian:stretch-slim
 MAINTAINER https://oda-alexandre.com
 
 ENV USER dropbox
+ENV PORTS 17500
 ENV DEBIAN_FRONTEND noninteractive
 
 # INSTALLATION DES PREREQUIS
@@ -35,8 +36,8 @@ sudo rm /etc/apt/sources.list && \
 sudo rm -rf /var/cache/apt/archives/* && \
 sudo rm -rf /var/lib/apt/lists/*
 
-# EXPOSITION PORT
-EXPOSE 17500
+# OUVERTURE DE PORTS
+EXPOSE ${PORTS}
 
 # COMMANDE AU DEMARRAGE DU CONTENEUR
 CMD .dropbox-dist/dropboxd
