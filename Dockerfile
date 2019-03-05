@@ -2,8 +2,8 @@ FROM debian:stretch-slim
 
 MAINTAINER https://oda-alexandre.com
 
-ENV USER dropbox \
-DEBIAN_FRONTEND noninteractive
+ENV USER dropbox
+ENV DEBIAN_FRONTEND noninteractive
 
 # INSTALLATION DES PREREQUIS
 RUN apt-get update && apt-get install -y --no-install-recommends \
