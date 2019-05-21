@@ -1,6 +1,6 @@
 FROM debian:stretch-slim
 
-MAINTAINER http://www.oda-alexandre.com/
+MAINTAINER https://www.oda-alexandre.com/
 
 ENV USER dropbox
 ENV PORTS 17500
