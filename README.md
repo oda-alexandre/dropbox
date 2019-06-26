@@ -1,6 +1,6 @@
 # DROPBOX
 
-[![dockeri.co](https://dockeri.co/image/alexandreoda/dropbox)](https://hub.docker.com/r/alexandreoda/dropbox)
+<img src="https://banner2.kisspng.com/20180823/kfj/kisspng-dropbox-computer-icons-portable-network-graphics-s-youtube-social-media-network-video-entertainm-5b7f6f3f39ba40.2846138015350782072365.jpg" />
 
 
 ## INDEX
@@ -15,10 +15,7 @@
 
 ## BADGES
 
-[![version](https://images.microbadger.com/badges/version/alexandreoda/dropbox.svg)](https://microbadger.com/images/alexandreoda/dropbox)
-[![size](https://images.microbadger.com/badges/image/alexandreoda/dropbox.svg)](https://microbadger.com/images/alexandreoda/dropbox")
-[![build](https://img.shields.io/docker/build/alexandreoda/dropbox.svg)](https://hub.docker.com/r/alexandreoda/dropbox)
-[![automated](https://img.shields.io/docker/automated/alexandreoda/dropbox.svg)](https://hub.docker.com/r/alexandreoda/dropbox)
+[![pipeline status](https://gitlab.com/oda-alexandre/dropbox/badges/master/pipeline.svg)](https://gitlab.com/oda-alexandre/dropbox/commits/master)
 
 
 ## INTRODUCTION
