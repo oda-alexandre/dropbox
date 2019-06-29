@@ -48,7 +48,7 @@ docker run -d --name dropbox -v ${HOME}/dropbox:/home/dropbox/Dropbox --restart=
 
 ## CONFIG
 
-Utilisez les logs of container au premier lancement for obtenir the lien of synchronisation dropbox
+Use the logs of container at first launch to get the link of synchronization dropbox
 
 ```
 docker logs dropbox
