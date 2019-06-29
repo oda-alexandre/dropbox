@@ -7,7 +7,7 @@
 
 - [Badges](#BADGES)
 - [Introduction](#INTRODUCTION)
-- [PREREQUISITESites](#PREREQUISITESITES)
+- [Prerequisites](#PREREQUISITESITES)
 - [Install](#INSTALL)
 - [Configuration](#CONFIG)
 - [License](#LICENSE)
@@ -28,7 +28,7 @@ Continuous integration on :
 
 - [gitlab](https://gitlab.com/oda-alexandre/dropbox/pipelines)
 
-automatically updated on :
+Automatically updated on :
 
 - [docker hub public](https://hub.docker.com/r/alexandreoda/dropbox/).
 
