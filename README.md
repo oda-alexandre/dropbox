@@ -7,9 +7,9 @@
 
 - [Badges](#BADGES)
 - [Introduction](#INTRODUCTION)
-- [Prerequis](#PREREQUIS)
-- [Installation](#INSTALLATION)
-- [Configuration](#CONFIGURATION)
+- [PREREQUISITESites](#PREREQUISITESITES)
+- [Install](#INSTALL)
+- [Configuration](#CONFIG)
 - [License](#LICENSE)
 
 
@@ -20,19 +20,25 @@
 
 ## INTRODUCTION
 
-Ce repository contient le fichier Dockerfile de
+Docker image of :
 
 - [Dropbox](https://www.dropbox.com/)
 
-Mis à jour automatiquement dans le [docker hub public](https://hub.docker.com/r/alexandreoda/dropbox/).
+Continuous integration on :
+
+- [gitlab](https://gitlab.com/oda-alexandre/dropbox/pipelines)
+
+automatically updated on :
+
+- [docker hub public](https://hub.docker.com/r/alexandreoda/dropbox/).
 
 
-## PREREQUIS
+## PREREQUISITES
 
-Installer [docker](https://www.docker.com)
+Use [docker](https://www.docker.com)
 
 
-## INSTALLATION
+## INSTALL
 
 ```
 mkdir $HOME/dropbox
@@ -40,9 +46,9 @@ docker run -d --name dropbox -v ${HOME}/dropbox:/home/dropbox/Dropbox --restart=
 ```
 
 
-## CONFIGURATION
+## CONFIG
 
-Utilisez les logs du container au premier lancement pour obtenir le lien de synchronisation dropbox
+Utilisez les logs of container au premier lancement for obtenir the lien of synchronisation dropbox
 
 ```
 docker logs dropbox
@@ -51,4 +57,4 @@ docker logs dropbox
 
 ## LICENSE
 
-[![GPLv3+](http://gplv3.fsf.org/gplv3-127x51.png)](https://github.com/oda-alexandre/dropbox/blob/master/LICENSE)
+[![GPLv3+](http://gplv3.fsf.org/gplv3-127x51.png)](https://gitlab.com/oda-alexandre/dropbox/blob/master/LICENSE)

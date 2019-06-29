@@ -1,34 +1,37 @@
+# IMAGE TO USE
 FROM debian:stretch-slim
 
+# MAINTAINER
 MAINTAINER https://www.oda-alexandre.com/
 
+# VARIABLES
 ENV USER dropbox
 ENV PORTS 17500
 ENV DEBIAN_FRONTEND noninteractive
 
-# INSTALLATION DES PREREQUIS
+# INSTALL PACKAGES
 RUN apt-get update && apt-get install -y --no-install-recommends \
 sudo \
 ca-certificates \
 python \
 wget && \
 
-# AJOUT UTILISATEUR
+# ADD USER
 useradd -d /home/${USER} -m ${USER} && \
 passwd -d ${USER} && \
 adduser ${USER} sudo
 
-# SELECTION UTILISATEUR
+# SELECT USER
 USER ${USER}
 
-# SELECTION ESPACE DE TRAVAIL
+# SELECT WORKING SPACE
 WORKDIR /home/${USER}
 
-# INSTALLATION DE L'APPLICATION
+# INSTALL APP
 RUN sudo wget https://www.dropbox.com/download?dl=packages/dropbox.py -O /usr/local/bin/dropbox-cli && \
 wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf - && \
 
-# NETTOYAGE
+# CLEANING
 sudo apt-get --purge autoremove -y \
 wget && \
 sudo apt-get autoclean -y && \
@@ -36,8 +39,8 @@ sudo rm /etc/apt/sources.list && \
 sudo rm -rf /var/cache/apt/archives/* && \
 sudo rm -rf /var/lib/apt/lists/*
 
-# OUVERTURE DE PORTS
+# OPENING PORTS
 EXPOSE ${PORTS}
 
-# COMMANDE AU DEMARRAGE DU CONTENEUR
-CMD .dropbox-dist/dropboxd
+# START THE CONTAINER
+CMD .dropbox-dist/dropboxd \
