@@ -6,16 +6,16 @@ ENV USER dropbox
 ENV PORTS 17500
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN echo -e '\033[36;1m ******* INSTALL PACKAGES ******** \033[0m' && \
+RUN echo -e '\033[36;1m ******* INSTALL PACKAGES ******** \033[0m'; \
 apt-get update && apt-get install -y --no-install-recommends \
 sudo \
 ca-certificates \
 python \
 wget
 
-RUN echo -e '\033[36;1m ******* ADD USER ******** \033[0m' && \
-useradd -d /home/${USER} -m ${USER} && \
-passwd -d ${USER} && \
+RUN echo -e '\033[36;1m ******* ADD USER ******** \033[0m'; \
+useradd -d /home/${USER} -m ${USER}; \
+passwd -d ${USER}; \
 adduser ${USER} sudo
 
 RUN echo -e '\033[36;1m ******* SELECT USER ******** \033[0m'
@@ -24,16 +24,16 @@ USER ${USER}
 RUN echo -e '\033[36;1m ******* SELECT WORKING SPACE ******** \033[0m'
 WORKDIR /home/${USER}
 
-RUN echo -e '\033[36;1m ******* INSTALL APP ******** \033[0m' && \
-sudo wget https://www.dropbox.com/download?dl=packages/dropbox.py -O /usr/local/bin/dropbox-cli && \
+RUN echo -e '\033[36;1m ******* INSTALL APP ******** \033[0m'; \
+sudo wget https://www.dropbox.com/download?dl=packages/dropbox.py -O /usr/local/bin/dropbox-cli; \
 wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
 
-RUN echo -e '\033[36;1m ******* CLEANING ******** \033[0m' && \
+RUN echo -e '\033[36;1m ******* CLEANING ******** \033[0m'; \
 sudo apt-get --purge autoremove -y \
-wget && \
-sudo apt-get autoclean -y && \
-sudo rm /etc/apt/sources.list && \
-sudo rm -rf /var/cache/apt/archives/* && \
+wget; \
+sudo apt-get autoclean -y; \
+sudo rm /etc/apt/sources.list; \
+sudo rm -rf /var/cache/apt/archives/*; \
 sudo rm -rf /var/lib/apt/lists/*
 
 RUN echo -e '\033[36;1m ******* OPENING PORTS ******** \033[0m'
