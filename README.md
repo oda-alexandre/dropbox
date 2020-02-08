@@ -43,7 +43,7 @@ Use [docker](https://www.docker.com)
 ## INSTALL
 
 ```
-mkdir $HOME/dropbox
+mkdir ${HOME}/dropbox
 docker run -d --name dropbox -v ${HOME}/dropbox:/home/dropbox/Dropbox --restart always alexandreoda/dropbox
 ```
 
