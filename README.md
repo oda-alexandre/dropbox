@@ -5,12 +5,14 @@
 
 ## INDEX
 
-- [Badges](#BADGES)
-- [Introduction](#INTRODUCTION)
-- [Prerequisites](#PREREQUISITESITES)
-- [Install](#INSTALL)
-- [Configuration](#CONFIG)
-- [License](#LICENSE)
+- [DROPBOX](#dropbox)
+  - [INDEX](#index)
+  - [BADGES](#badges)
+  - [INTRODUCTION](#introduction)
+  - [PREREQUISITES](#prerequisites)
+  - [INSTALL](#install)
+  - [CONFIG](#config)
+  - [LICENSE](#license)
 
 
 ## BADGES
@@ -41,8 +43,8 @@ Use [docker](https://www.docker.com)
 ## INSTALL
 
 ```
-mkdir $HOME/dropbox
-docker run -d --name dropbox -v ${HOME}/dropbox:/home/dropbox/Dropbox --restart=always alexandreoda/dropbox
+mkdir ${HOME}/dropbox
+docker run -d --name dropbox -v ${HOME}/dropbox:/home/dropbox/Dropbox --restart always alexandreoda/dropbox
 ```
 
 
