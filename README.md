@@ -1,6 +1,6 @@
 # DROPBOX
 
-<img src="https://banner2.kisspng.com/20180823/kfj/kisspng-dropbox-computer-icons-portable-network-graphics-s-youtube-social-media-network-video-entertainm-5b7f6f3f39ba40.2846138015350782072365.jpg" width="200" height="200"/>
+<img src="https://assets.gitlab-static.net/uploads/-/system/project/avatar/12904443/glyph_m1_2x.png" width="200" height="200"/>
 
 
 ## INDEX
