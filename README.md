@@ -1,7 +1,6 @@
 # DROPBOX
 
-<img src="https://assets.gitlab-static.net/uploads/-/system/project/avatar/12904443/glyph_m1_2x.png" width="200" height="200"/>
-
+![logo](https://assets.gitlab-static.net/uploads/-/system/project/avatar/12904443/glyph_m1_2x.png)
 
 ## INDEX
 
@@ -15,16 +14,13 @@
   - [CONFIG](#config)
   - [LICENSE](#license)
 
-
 ## BADGES
 
 [![pipeline status](https://gitlab.com/oda-alexandre/dropbox/badges/master/pipeline.svg)](https://gitlab.com/oda-alexandre/dropbox/commits/master)
 
-
 ## FIRST UPDATE
 
 Date: 01-01-01
-
 
 ## INTRODUCTION
 
@@ -40,28 +36,22 @@ Automatically updated on :
 
 - [docker hub public](https://hub.docker.com/r/alexandreoda/dropbox/).
 
-
 ## PREREQUISITES
 
 Use [docker](https://www.docker.com)
 
-
 ## INSTALL
 
-```
-mkdir ${HOME}/dropbox
+```mkdir ${HOME}/dropbox
 docker run -d --name dropbox -v ${HOME}/dropbox:/home/dropbox/Dropbox --restart always alexandreoda/dropbox
 ```
-
 
 ## CONFIG
 
 Use the logs of container at first launch to get the link of synchronization dropbox
 
+```docker logs dropbox
 ```
-docker logs dropbox
-```
-
 
 ## LICENSE
 
