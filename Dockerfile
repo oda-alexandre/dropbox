@@ -12,7 +12,14 @@ RUN echo -e '\033[36;1m ******* INSTALL PACKAGES ******** \033[0m' && \
   sudo \
   ca-certificates \
   python \
-  wget
+  wget \
+  && \
+  echo -e '\033[36;1m ******* CLEANING ******** \033[0m' && \
+  apt-get --purge autoremove -y && \
+  apt-get autoclean -y && \
+  rm /etc/apt/sources.list && \
+  rm -rf /var/cache/apt/archives/* && \
+  rm -rf /var/lib/apt/lists/*
 
 RUN echo -e '\033[36;1m ******* ADD USER ******** \033[0m' && \
   useradd -d ${HOME} -m ${USER} && \
@@ -27,15 +34,8 @@ WORKDIR ${HOME}
 
 RUN echo -e '\033[36;1m ******* INSTALL APP ******** \033[0m' && \
   sudo wget https://www.dropbox.com/download?dl=packages/dropbox.py -O /usr/local/bin/dropbox-cli && \
-  wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
-
-RUN echo -e '\033[36;1m ******* CLEANING ******** \033[0m' && \
-  sudo apt-get --purge autoremove -y \
-  wget && \
-  sudo apt-get autoclean -y && \
-  sudo rm /etc/apt/sources.list && \
-  sudo rm -rf /var/cache/apt/archives/* && \
-  sudo rm -rf /var/lib/apt/lists/*
+  wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf - && \
+  sudo apt-get --purge autoremove -y wget
 
 RUN echo -e '\033[36;1m ******* OPENING PORTS ******** \033[0m'
 EXPOSE ${PORTS}
