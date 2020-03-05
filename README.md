@@ -42,7 +42,11 @@ Use [docker](https://www.docker.com)
 ### DOCKER RUN
 
 ```\
-docker  run -d --name dropbox -v ${HOME}/dropbox:/home/dropbox/Dropbox --restart unless-stopped alexandreoda/dropbox
+docker run -d \
+--name dropbox \
+--restart unless-stopped \
+-v ${HOME}/dropbox:/home/dropbox/Dropbox \
+alexandreoda/dropbox
 ```
 
 ### DOCKER COMPOSE
