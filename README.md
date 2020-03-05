@@ -10,6 +10,8 @@
   - [INTRODUCTION](#introduction)
   - [PREREQUISITES](#prerequisites)
   - [INSTALL](#install)
+    - [DOCKER RUN](#docker-run)
+    - [DOCKER COMPOSE](#docker-compose)
   - [CONFIG](#config)
   - [LICENSE](#license)
 
@@ -25,7 +27,7 @@ Docker image of :
 
 Continuous integration on :
 
-- [gitlab](https://gitlab.com/oda-alexandre/dropbox/pipelines)
+- [gitlab pipelines](https://gitlab.com/oda-alexandre/dropbox/pipelines)
 
 Automatically updated on :
 
@@ -37,8 +39,24 @@ Use [docker](https://www.docker.com)
 
 ## INSTALL
 
-```mkdir ${HOME}/dropbox
-docker run -d --name dropbox -v ${HOME}/dropbox:/home/dropbox/Dropbox --restart always alexandreoda/dropbox
+### DOCKER RUN
+
+```docker run -d --name dropbox -v ${HOME}/dropbox:/home/dropbox/Dropbox --restart unless-stopped alexandreoda/dropbox
+```
+
+### DOCKER COMPOSE
+
+```yml
+version: "3.7"
+
+services:
+  dropbox:
+    container_name: dropbox
+    image: alexandreoda/dropbox
+    restart: unless-stopped
+    privileged: false
+    volumes:
+      - "${HOME}/dropbox:/home/dropbox/Dropbox"
 ```
 
 ## CONFIG

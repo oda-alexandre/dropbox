@@ -1,0 +1,10 @@
+version: "3.7"
+
+services:
+  dropbox:
+    container_name: dropbox
+    image: alexandreoda/dropbox
+    restart: unless-stopped
+    privileged: false
+    volumes:
+      - "${HOME}/dropbox:/home/dropbox/Dropbox"
