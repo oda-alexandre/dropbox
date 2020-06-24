@@ -2,8 +2,6 @@
 
 ![logo](https://assets.gitlab-static.net/uploads/-/system/project/avatar/12904443/glyph_m1_2x.png)
 
-## INDEX
-
 - [DROPBOX](#dropbox)
   - [INDEX](#index)
   - [BADGES](#badges)
@@ -37,7 +35,7 @@ Automatically updated on :
 
 Use [docker](https://www.docker.com)
 
-## INSTALL
+## BUILD
 
 ### DOCKER RUN
 
